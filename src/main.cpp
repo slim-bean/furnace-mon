@@ -114,7 +114,7 @@ void setup()
   Wire.begin(I2C_SDA, I2C_SCL);
 
   emon1.current(ANALOG_PIN, CAL_VAL);
-  if (!sht31.begin(0x45))
+  if (!sht31.begin(SHT_ADDRESS))
   { // Set to 0x45 for alternate i2c addr
     Serial.println("Couldn't find SHT31");
     while (1)
